@@ -3,6 +3,8 @@ import Banner from "../components/banner/Banner"
 import Header from '../components/header/Header'
 import Options from "../components/options/Options"
 
+import Slider from '../components/slider/Slider'
+
 
 export const Home = () => {
 
@@ -28,6 +30,8 @@ export const Home = () => {
       >
         Vamos nessa?<br/>Então escolha seu continente
       </Text>
+
+      <Slider />
 
     </>
 
