@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from "@chakra-ui/react"
+import { Flex, Image, Text, useBreakpointValue } from "@chakra-ui/react"
 import Banner from "../components/banner/Banner"
 import Header from '../components/header/Header'
 import Options from "../components/options/Options"
@@ -15,16 +15,16 @@ export const Home = () => {
       <Banner />
       <Options />
 
-      <Flex algin="center" justify="center" p="100px">
+      <Flex algin="center" justify="center" p={["50px","100px"]}>
         <Image
-          ml= "30px"
+         
           src="images/Divider.png" />
       </Flex>
 
 
       <Text
         align="center"
-        fontSize="36px"
+        fontSize={["18px", "18px", "18px", "26px"]}
         fontWeight="normal"
         color="gray.700"
       >

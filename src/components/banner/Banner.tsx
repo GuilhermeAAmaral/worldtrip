@@ -15,7 +15,7 @@ export const Banner = () => {
             bgRepeat="no-repeat"
             bgSize="cover"
             w="100%"
-            h={["183px","335px"]}
+            h={["173px","335px"]}
         >
 
             <Flex alignItems="center" gap={5} justifyContent="center">
@@ -28,6 +28,7 @@ export const Banner = () => {
                             fontWeight="medium"
                             color="gray.100"
                             mr={["70px","50px"]}
+                            mt={["15px","50px"]}
                       
                         >
                             5 Continentes,<br/> infinitas possibilidades.

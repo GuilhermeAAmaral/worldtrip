@@ -4,19 +4,20 @@ export const Cities = () => {
 
     return (
 
-        <Flex w="1160px" algin="center" justifyContent="center" direction="column" m="auto">
+        <Flex w={["100%","100%","100%","1160px"]} algin="center" justifyContent="center" direction="column" m="auto">
 
             <Text
                 fontSize="36px"
                 fontWeight="500"
                 mt="100px"
+                ml={["10px", "10px", "10px", "0px"]}
               
             >
                 Cidades +100
             </Text>
 
             <SimpleGrid
-                columns={4} spacing={10}
+                columns={[1, 1, 2, 3, 4]} spacing={10}
                 align="center"
                 justify="center"
                 mt="20px"

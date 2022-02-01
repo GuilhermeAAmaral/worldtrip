@@ -1,4 +1,4 @@
-import { Box, Flex, Text, HStack, Popover, PopoverTrigger, Icon, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverBody } from "@chakra-ui/react"
+import { Box, Flex, Text, Stack, Popover, PopoverTrigger, Icon, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverBody } from "@chakra-ui/react"
 import { RiInformationLine } from "react-icons/ri"
 
 export const InformationContinet = () => {
@@ -6,18 +6,21 @@ export const InformationContinet = () => {
     return (
 
         <Flex
-            direction="row"
+            direction={["column","row"]}
             algin="center"
             justify="center"
             mt="100px"
 
         >
-            <Box w="600px" mr="100px">
+            <Box w={["100vw","100%", "100vw","600px"]} mr={["auto", "100px"]}>
                 <Text
                     textAlign="justify"
-                    fontSize="24px"
+                    fontSize={["18px","21px","24px"]}
                     lineHeight="36px"
                     fontWeight="400"
+                    p={["20px"]}
+                    mt="auto"
+                    mb="auto"
                 >
                     A Europa é, por convenção, um dos seis continentes do mundo.
                     Compreendendo a península ocidental da Eurásia,
@@ -26,20 +29,21 @@ export const InformationContinet = () => {
                 </Text>
             </Box>
 
-            <Flex direction="row">
-                <HStack spacing={14}>
-                    <Box>
+            <Flex direction="row" mr="25px" mt="auto" mb="auto">
+                <Stack spacing={[10, 14]} direction={["row","column", "column", "row"]}>
+                    <Box >
                         <Text
-                            fontSize="48px"
+                            fontSize={["35px","48px"]}
                             lineHeight="72px"
                             fontWeight="600"
                             align="center"
                             color="yellow.400"
+                            p={["20px"]}
                         >
                             50
                         </Text>
                         <Text
-                            fontSize="24px"
+                            fontSize={["20px","24px"]}
                             fontWeight="600"
                             lineHeight="36px"
                             align="center"
@@ -50,16 +54,17 @@ export const InformationContinet = () => {
 
                     <Box>
                         <Text
-                            fontSize="48px"
+                            fontSize={["35px","48px"]}
                             lineHeight="72px"
                             fontWeight="600"
                             align="center"
                             color="yellow.400"
+                            p={["20px"]}
                         >
                             60
                         </Text>
                         <Text
-                            fontSize="24px"
+                            fontSize={["20px","24px"]}
                             fontWeight="600"
                             lineHeight="36px"
                             align="center"
@@ -70,19 +75,21 @@ export const InformationContinet = () => {
 
                     <Box>
                         <Text
-                            fontSize="48px"
+                            fontSize={["35px","48px"]}
                             lineHeight="72px"
                             fontWeight="600"
                             align="center"
                             color="yellow.400"
+                            p={["20px"]}
                         >
                             27
                         </Text>
                         <Text
-                            fontSize="24px"
+                            fontSize={["20px","24px"]}
                             fontWeight="600"
                             lineHeight="36px"
                             align="center"
+                            
                         >
                             cidade + 100
                             <Popover>
@@ -108,7 +115,7 @@ export const InformationContinet = () => {
                             </Popover>
                         </Text>
                     </Box>
-                </HStack>
+                </Stack>
             </Flex>
 
         </Flex>

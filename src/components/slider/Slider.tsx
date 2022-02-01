@@ -45,13 +45,13 @@ export const Slider = () => {
                                     <Heading
                                         color="gray.100" 
                                         padding={5}
-                                        fontSize="48px"
+                                        fontSize={["24px","35px","48px"]}
                                     >
                                         Europa
                                     </Heading>
                                     <Text
                                         color="gray.100"
-                                        fontSize="26px"
+                                        fontSize={["16px","20px","26px"]}
                                         fontWeight="700"
                                     >
                                         O continente mais antigo

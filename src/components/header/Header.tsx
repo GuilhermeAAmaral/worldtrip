@@ -35,6 +35,7 @@ export const Header = () => {
             <Image 
                 src="images/Logo.png"
                 alt="logo"
+                w={["150px","200px"]}
             />
         </Flex>
     )
