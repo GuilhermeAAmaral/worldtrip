@@ -7,10 +7,10 @@ import '../styles/slider.css'
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
-    
     <ChakraProvider resetCSS theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
+
   )
 }
 

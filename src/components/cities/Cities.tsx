@@ -1,9 +1,12 @@
-import { Box, Image, Text, Flex, SimpleGrid } from "@chakra-ui/react"
+import { Text, Flex, SimpleGrid } from "@chakra-ui/react"
+import { ContinentProps } from "../../pages/continent/[slug]"
+import CardCities from "../cardCities/CardCities"
 
-export const Cities = () => {
+
+export const Cities = ({continent} :ContinentProps) => {
 
     return (
-
+        <>
         <Flex w={["100%","100%","100%","1160px"]} algin="center" justifyContent="center" direction="column" m="auto">
 
             <Text
@@ -23,169 +26,20 @@ export const Cities = () => {
                 mt="20px"
             >
 
-                <Box
-                    w="279px"
-                    h="276px"
-                    mt="20px"
-                    ml="auto"
-                    mr="auto"
-
-                >
-                    <Image w="279px" src="images/Londres.png" />
-
-                    <Flex
-                        direction="row"
-                        align="center"
-                        justify="space-between"
-                        p="25px"
-                        borderBottom="1px"
-                        borderLeft="1px"
-                        borderRight="1px"
-                        borderColor="yellow.400"
-
-                    >
-                        <Box textAlign="left">
-                            <Text pb="10px" fontSize="20px" fontWeight="600">Londres</Text>
-                            <Text>Reino Unido</Text>
-                        </Box>
-
-                        <Box>
-                            <Image src="images/Ing.png" />
-                        </Box>
-                    </Flex>
-                </Box>
-
-                <Box
-                    w="279px"
-                    h="276px"
-                    mt="20px"
-                    ml="auto"
-                    mr="auto"
-
-                >
-                    <Image w="279px" src="images/Londres.png" />
-
-                    <Flex
-                        direction="row"
-                        align="center"
-                        justify="space-between"
-                        p="25px"
-                        borderBottom="1px"
-                        borderLeft="1px"
-                        borderRight="1px"
-                        borderColor="yellow.400"
-
-                    >
-                        <Box textAlign="left">
-                            <Text pb="10px" fontSize="20px" fontWeight="600">Londres</Text>
-                            <Text>Reino Unido</Text>
-                        </Box>
-
-                        <Box>
-                            <Image src="images/Ing.png" />
-                        </Box>
-                    </Flex>
-                </Box>
-
-                <Box
-                    w="279px"
-                    h="276px"
-                    mt="20px"
-                    ml="auto"
-                    mr="auto"
-
-                >
-                    <Image w="279px" src="images/Londres.png" />
-
-                    <Flex
-                        direction="row"
-                        align="center"
-                        justify="space-between"
-                        p="25px"
-                        borderBottom="1px"
-                        borderLeft="1px"
-                        borderRight="1px"
-                        borderColor="yellow.400"
-
-                    >
-                        <Box textAlign="left">
-                            <Text pb="10px" fontSize="20px" fontWeight="600">Londres</Text>
-                            <Text>Reino Unido</Text>
-                        </Box>
-
-                        <Box>
-                            <Image src="images/Ing.png" />
-                        </Box>
-                    </Flex>
-                </Box>
-
-                <Box
-                    w="279px"
-                    h="276px"
-                    mt="20px"
-                    ml="auto"
-                    mr="auto"
-
-                >
-                    <Image w="279px" src="images/Londres.png" />
-
-                    <Flex
-                        direction="row"
-                        align="center"
-                        justify="space-between"
-                        p="25px"
-                        borderBottom="1px"
-                        borderLeft="1px"
-                        borderRight="1px"
-                        borderColor="yellow.400"
-
-                    >
-                        <Box textAlign="left">
-                            <Text pb="10px" fontSize="20px" fontWeight="600">Londres</Text>
-                            <Text>Reino Unido</Text>
-                        </Box>
-
-                        <Box>
-                            <Image src="images/Ing.png" />
-                        </Box>
-                    </Flex>
-                </Box>
-
-                <Box
-                    w="279px"
-                    h="276px"
-                    mt="20px"
-                    ml="auto"
-                    mr="auto"
-
-                >
-                    <Image w="279px" src="images/Londres.png" />
-
-                    <Flex
-                        direction="row"
-                        align="center"
-                        justify="space-between"
-                        p="25px"
-                        borderBottom="1px"
-                        borderLeft="1px"
-                        borderRight="1px"
-                        borderColor="yellow.400"
-
-                    >
-                        <Box textAlign="left">
-                            <Text pb="10px" fontSize="20px" fontWeight="600">Londres</Text>
-                            <Text>Reino Unido</Text>
-                        </Box>
-
-                        <Box>
-                            <Image src="images/Ing.png" />
-                        </Box>
-                    </Flex>
-                </Box>
-
+            {continent.cities100.map(city => (
+                <CardCities 
+                    key={city.city}
+                    city={city.city}
+                    country={city.country2}
+                    thumbnail ={city.thumbnail}
+                    flag={city.flag}
+                 />
+            ))}
+        
             </SimpleGrid>
 
         </Flex >
+        </>
     )
 }
 

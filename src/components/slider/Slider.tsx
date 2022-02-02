@@ -9,8 +9,16 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
+interface ContinentProps {
+    continents: {
+      slug: string,
+      title: string,
+      summary: string,
+      image: string
+    }[]
+  }
 
-export const Slider = () => {
+export const Slider = ({continents}: ContinentProps) => {
 
     return (
 
@@ -27,75 +35,44 @@ export const Slider = () => {
                 style={{ width: '85%', flex: '1' }}
 
             >
-                <SwiperSlide>
-                    <Flex
-                        w="100%"
-                        h="450px"
-                        textAlign="center"
-                        align="center"
-                        justify="center"
-                        bgImage="url('images/ContinentImage.png')"
-                        bgRepeat="no-repeat"
-                        bgSize="cover"
-                        bgPosition="center"
-                    >
-                        <Link href="/continent" >
-                            <HStack spacing={5}>
-                                <a>
-                                    <Heading
-                                        color="gray.100" 
-                                        padding={5}
-                                        fontSize={["24px","35px","48px"]}
-                                    >
-                                        Europa
-                                    </Heading>
-                                    <Text
-                                        color="gray.100"
-                                        fontSize={["16px","20px","26px"]}
-                                        fontWeight="700"
-                                    >
-                                        O continente mais antigo
-                                    </Text>
-                                </a>
-                            </HStack>
-                        </Link>
-                    </Flex>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Flex
-                        w="100%"
-                        h="450px"
-                        textAlign="center"
-                        align="center"
-                        justify="center"
-                        bgImage="url('images/ContinentImage.png')"
-                        bgRepeat="no-repeat"
-                        bgSize="cover"
-                        bgPosition="center"
-                    >
-                        <Link href="/continent" >
-                            <HStack spacing={5}>
-                                <a>
-                                    <Heading
-                                        color="gray.100" 
-                                        padding={5}
-                                        fontSize="48px"
-                                    >
-                                        Europa
-                                    </Heading>
-                                    <Text
-                                        color="gray.300"
-                                        fontSize="26px"
-                                        fontWeight="700"
-                                    >
-                                        O continente mais antigo
-                                    </Text>
-                                </a>
-                            </HStack>
-                        </Link>
-                    </Flex>
-                </SwiperSlide>
+                {continents.map (continent => {
+                    return (
+                        <SwiperSlide key={continent.title}>
+                        <Flex
+                            w="100%"
+                            h="450px"
+                            textAlign="center"
+                            align="center"
+                            justify="center"
+                            bgImage={continent.image}
+                            bgRepeat="no-repeat"
+                            bgSize="cover"
+                            bgPosition="center"
+                        >
+                            <Link href={`/continent/${continent.slug}`} >
+                                <HStack spacing={5}>
+                                    <a>
+                                        <Heading
+                                            color="gray.100" 
+                                            padding={5}
+                                            fontSize={["24px","35px","48px"]}
+                                        >
+                                            {continent.title}
+                                        </Heading>
+                                        <Text
+                                            color="gray.100"
+                                            fontSize={["16px","20px","26px"]}
+                                            fontWeight="700"
+                                        >
+                                            {continent.summary}
+                                        </Text>
+                                    </a>
+                                </HStack>
+                            </Link>
+                        </Flex>
+                    </SwiperSlide>
+                    )
+                })}
 
             </Swiper>
 

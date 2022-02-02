@@ -1,7 +1,9 @@
 import { Box, Flex, Text, Stack, Popover, PopoverTrigger, Icon, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverBody } from "@chakra-ui/react"
 import { RiInformationLine } from "react-icons/ri"
+import { ContinentProps } from "../../pages/continent/[slug]"
 
-export const InformationContinet = () => {
+
+export const InformationContinet = ({continent}: ContinentProps) => {
 
     return (
 
@@ -22,10 +24,7 @@ export const InformationContinet = () => {
                     mt="auto"
                     mb="auto"
                 >
-                    A Europa é, por convenção, um dos seis continentes do mundo.
-                    Compreendendo a península ocidental da Eurásia,
-                    a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes
-                    Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+                    {continent.description}
                 </Text>
             </Box>
 
@@ -40,7 +39,7 @@ export const InformationContinet = () => {
                             color="yellow.400"
                             p={["20px"]}
                         >
-                            50
+                            {continent.country}
                         </Text>
                         <Text
                             fontSize={["20px","24px"]}
@@ -61,7 +60,7 @@ export const InformationContinet = () => {
                             color="yellow.400"
                             p={["20px"]}
                         >
-                            60
+                            {continent.linguage}
                         </Text>
                         <Text
                             fontSize={["20px","24px"]}
@@ -82,7 +81,7 @@ export const InformationContinet = () => {
                             color="yellow.400"
                             p={["20px"]}
                         >
-                            27
+                            {continent.cities}
                         </Text>
                         <Text
                             fontSize={["20px","24px"]}
@@ -109,7 +108,7 @@ export const InformationContinet = () => {
                                     <PopoverArrow bg="gray.700"/>
                                     <PopoverCloseButton />
                                     <PopoverBody fontSize="lg" fontWeight="400">
-                                        outros Paises
+                                        {continent.citiesList}
                                     </PopoverBody>
                                 </PopoverContent>
                             </Popover>
