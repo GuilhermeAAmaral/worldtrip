@@ -13,7 +13,7 @@ export const CardCities = ({city, country, thumbnail, flag }) => {
     >
         <Image w="279px" src={thumbnail} />
 
-        <Flex
+        <Flex 
             direction="row"
             align="center"
             justify="space-between"
@@ -22,6 +22,7 @@ export const CardCities = ({city, country, thumbnail, flag }) => {
             borderLeft="1px"
             borderRight="1px"
             borderColor="yellow.400"
+            backgroundColor="#ffb90818"
 
         >
             <Box textAlign="left">
@@ -30,7 +31,12 @@ export const CardCities = ({city, country, thumbnail, flag }) => {
             </Box>
 
             <Box>
-                <Image src={flag} />
+                <Image 
+                    w="30px"
+                    h="30px"
+                    borderRadius="50px"
+                    src={flag}
+                 />
             </Box>
         </Flex>
     </Box>
