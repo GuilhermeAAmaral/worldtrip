@@ -1,6 +1,6 @@
 Título: WorldTrip
 
-Descrição: Um website desenvolvido para que o usuário possa pesquisar e conhecer lugares para planejar a sua viagem de volta ao mundo!! 
+Descrição: Um website desenvolvido para que o usuário faça pesquisas e conheça lugares para planejar a sua viagem de volta ao mundo!! 
 
 Funcionalidades: Página inicial e página de detalhes com listagem do continente escolhido. 
 
